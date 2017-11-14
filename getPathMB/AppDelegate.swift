@@ -29,7 +29,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Add statusBarItem
         statusBarItem = statusBar.statusItemWithLength(-1)
         statusBarItem.menu = menu
-        statusBarItem.title = "getPath"
+//        statusBarItem.title = "getPath"
+        if let button = statusBarItem.button {
+            button.image = NSImage(named: "rw_logo_032")
+         }
         
         
         //Add menuItem to menu
