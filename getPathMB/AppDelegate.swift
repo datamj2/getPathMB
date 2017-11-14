@@ -16,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var filename_field: NSTextField!
     
     var path = "";
+//    var statusBar = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
     var statusBar = NSStatusBar.systemStatusBar()
     var statusBarItem : NSStatusItem = NSStatusItem()
     var menu: NSMenu = NSMenu()
@@ -29,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarItem = statusBar.statusItemWithLength(-1)
         statusBarItem.menu = menu
         statusBarItem.title = "getPath"
+        
         
         //Add menuItem to menu
         menuItem.title = "GetWindow"
@@ -80,6 +82,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         //        window.backgroundColor = NSColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1)
+//        if let button = statusBar.button {
+//            button.image = NSImage(named: "rw_logo")
+//        }
                 self.window!.orderOut(self)
     }
 
